@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/Week7_MVC">
-    <!--defining the connection for the connection pool -> go to the conectionpool.java and check the datasource-->
-    <Resource name="jdbc/userdb" auth="Container" 
-        driverClassName="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://localhost:3306/userdb" 
-        username="root" password="password" 
-        maxActive="100" maxIdle="30" maxWait="10000" 
-        logAbandoned="true" removeAbandoned="true" 
-        removeAbandonedTimeout="60" type="javax.sql.DataSource" />
+<Context path="/Week9_JPA">
+  <!--defining the connection for the connection pool -> go to the conectionpool.java and check the datasource-->
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/userdb" password="password" removeAbandoned="true" removeAbandonedTimeout="60" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/userdb" username="root"/>
 </Context>

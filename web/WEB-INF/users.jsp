@@ -36,7 +36,7 @@
                         <td><c:out value="${user.email}"  /></td>
                         <td><c:out value="${user.firstName}"  /></td>
                         <td><c:out value="${user.lastName}"  /></td>
-                        <td><c:out value="${user.role.name}"  /></td>
+                        <td><c:out value="${user.role.roleName}"  /></td>
                         <td><input type="hidden" name="action" value="edit">
                             <a href="<c:url value='/users?action=edit&amp;'>
                                    <c:param name='email' value='${user.email}'/>  
@@ -77,7 +77,7 @@
                 Password: <input type="password" value="" name="pw"> <br>    
                 Role: <select name="role">                  
                     <c:choose>
-                        <c:when test="${selectedUser.role.getId() == 1}" >                                  
+                        <c:when test="${user_role_id == 1}" >                                  
                             <option>system admin</option> 
                             <option>regular user</option>
                         </c:when>
@@ -90,7 +90,7 @@
                 <br>
                 <input type="submit" value="Update">
                 <input type="hidden" name="action" value="update">
-                <a href="/Week7_MVC/"><input type="button" value="Cancel">
+                <a href="/Week9_JPA/"><input type="button" value="Cancel">
                     <input type="hidden" name="action" value="cancel"></a> 
                 </c:if>
             <p>

@@ -53,7 +53,7 @@ public class UserServlet extends HttpServlet {
                     String email = request.getParameter("email");
                     us.delete(email);
                     request.setAttribute("message", "delete");
-                    response.sendRedirect("/Week7_MVC/");
+                    response.sendRedirect("/Week9_JPA/");
                     return;
                 } catch (Exception ex) {
                     Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
